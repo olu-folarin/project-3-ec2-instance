@@ -1,0 +1,12 @@
+Now creating a virtual server on AWS using the Elastic Cloud Compute service (ec2) with the following config deets:
+
+NOTE: After getting the details below from the aws ec2 service, don't launch it there. The server will be set up using terraform.
+
+Amazon Machine Image - ami-090fa75af13c156b4
+Virtual Private Cloud (vpc) - vpc-075343a660b9eb15c
+instance type - t2.micro
+security group ->
+
+HTTP - port 80 TCP
+SSH server - 22 TCP
+CIDR Block (allows access from anywhere) - ["0.0.0.0/0"]
