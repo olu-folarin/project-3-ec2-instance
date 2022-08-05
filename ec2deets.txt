@@ -2,9 +2,10 @@ Now creating a virtual server on AWS using the Elastic Cloud Compute service (ec
 
 NOTE: After getting the details below from the aws ec2 service, don't launch it there. The server will be set up using terraform.
 
-Amazon Machine Image - ami-090fa75af13c156b4
-Virtual Private Cloud (vpc) - vpc-075343a660b9eb15c
-instance type - t2.micro
+*different - ami-0cabc39acf991f4f1
+Amazon Machine Image - ami-
+Virtual Private Cloud (vpc) - vpc-
+instance type - 
 security group ->
 
 HTTP - port 80 TCP
@@ -12,3 +13,10 @@ SSH server - 22 TCP
 CIDR Block (allows access from anywhere) - ["0.0.0.0/0"]
 
 setting the egress protocol to -1 allows all protocols.
+
+To locate the subnet_id, got to aws:
+1. search for vpc
+2. select the default vpc and click subnets on the left sidebar.
+3. several subnets will be displayed. choose anyone without a name.
+
+remove the hardcoding from the http server config by using a data provider.
